@@ -4,15 +4,19 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Exrc1.Views"
+             mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Width="700" Height="350" Background="LightBlue">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Label Content="באגים שתיקנתי" HorizontalContentAlignment="Center" FontSize="50"></Label>
-        <Button FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Content="תקן באג" Height="62" Margin="176,216,176,222"></Button>
-        <Label Content="0" HorizontalContentAlignment="Center" FontSize="50" Margin="0,310,0,102"></Label>
-    </Grid>
+    <StackPanel>
+        <Grid Width="500" Height="500" Background="LightBlue">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            
+            <Label Content="באגים שתיקנתי" HorizontalContentAlignment="Center" FontSize="50" Grid.Row="0"></Label>
+            <Button x:Name="IncreaseBugs" FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Center" Content="תקן באג"  Grid.Row="1"></Button>
+            <Label x:Name="BugsCounter" HorizontalContentAlignment="Center" FontSize="50"  Grid.Row="2"></Label>
+        </Grid>
+    </StackPanel>
 </UserControl>
